@@ -3,27 +3,26 @@ package com.evrencoskun.tableviewsample2.ui.viewmodel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.evrencoskun.tableviewsample2.data.UserRepository;
-import com.evrencoskun.tableviewsample2.data.database.entity.User;
-import com.evrencoskun.tableviewsample2.model.ServiceRequest;
+import com.evrencoskun.tableviewsample2.ImportedDatabase.Word;
+import com.evrencoskun.tableviewsample2.ImportedDatabase.WordRepository;
 
 import java.util.List;
 
 public class MainViewModel extends ViewModel {
 
-    private final UserRepository mRepository;
-    private final LiveData<List<User>> mUserData;
+    private final WordRepository mRepository;
+    private final LiveData<List<Word>> mWordData;
 
-    public MainViewModel(UserRepository mRepository) {
+    public MainViewModel(WordRepository mRepository) {
         this.mRepository = mRepository;
-        this.mUserData = mRepository.getUserList();
+        this.mWordData = mRepository.getAllWords();
     }
 
-    public LiveData<List<User>> getUserList() {
-        return mUserData;
+    public LiveData<List<Word>> getWordList() {
+        return mWordData;
     }
 
-    public void postRequest(ServiceRequest serviceRequest) {
+/*    public void postRequest(ServiceRequest serviceRequest) {
         mRepository.postServiceRequest(serviceRequest);
-    }
+    }*/
 }

@@ -49,14 +49,14 @@ public class MainFragment extends Fragment {
 
 
         // initialize ViewModel
-        MainViewModelFactory factory = InjectorUtils.getMainViewModelFactory(getActivity().getApplicationContext());
+        MainViewModelFactory factory = InjectorUtils.getMainViewModelFactory(getActivity().getApplication(), getActivity().getApplicationContext());
         vMainViewModel = ViewModelProviders.of(this, factory).get(MainViewModel.class);
 
-        vMainViewModel.getUserList().observe(this, users -> {
+        vMainViewModel.getWordList().observe(this, words -> {
 
-            if(users != null && users.size()>0){
+            if(words != null && words.size()>0){
                 // set the list on TableViewModel
-                mTableAdapter.setUserList(users);
+                mTableAdapter.setWordList(words);
 
                 hideProgressBar();
             }
@@ -84,7 +84,7 @@ public class MainFragment extends Fragment {
         int size = 100; // this is the count of the data items.
         int page = 1; // Which page do we want to get from the server.
         ServiceRequest serviceRequest = new ServiceRequest(size, page);
-        vMainViewModel.postRequest(serviceRequest);
+        //vMainViewModel.postRequest(serviceRequest);
 
         showProgressBar();
     }

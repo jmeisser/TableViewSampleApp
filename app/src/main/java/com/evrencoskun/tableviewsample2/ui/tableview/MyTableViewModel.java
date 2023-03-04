@@ -2,6 +2,7 @@ package com.evrencoskun.tableviewsample2.ui.tableview;
 
 import android.view.Gravity;
 
+import com.evrencoskun.tableviewsample2.ImportedDatabase.Word;
 import com.evrencoskun.tableviewsample2.data.database.entity.User;
 import com.evrencoskun.tableviewsample2.ui.tableview.model.CellModel;
 import com.evrencoskun.tableviewsample2.ui.tableview.model.ColumnHeaderModel;
@@ -132,33 +133,33 @@ public class MyTableViewModel {
         return list;
     }
 
-    private List<List<CellModel>> createCellModelList(List<User> userList) {
+    private List<List<CellModel>> createCellModelList(List<Word> wordList) {
         List<List<CellModel>> lists = new ArrayList<>();
 
         // Creating cell model list from User list for Cell Items
         // In this example, User list is populated from web service
 
-        for (int i = 0; i < userList.size(); i++) {
-            User user = userList.get(i);
+        for (int i = 0; i < wordList.size(); i++) {
+            Word word = wordList.get(i);
 
             List<CellModel> list = new ArrayList<>();
 
             // The order should be same with column header list;
-            list.add(new CellModel("1-" + i, user.id));          // "Id"
-            list.add(new CellModel("2-" + i, user.name));        // "Name"
-            list.add(new CellModel("3-" + i, user.nickname));    // "Nickname"
-            list.add(new CellModel("4-" + i, user.email));       // "Email"
-            list.add(new CellModel("5-" + i, user.birthdate));   // "BirthDay"
-            list.add(new CellModel("6-" + i, user.gender));      // "Gender"
-            list.add(new CellModel("7-" + i, user.age));         // "Age"
-            list.add(new CellModel("8-" + i, user.job));         // "Job"
-            list.add(new CellModel("9-" + i, user.salary));      // "Salary"
-            list.add(new CellModel("10-" + i, user.created_at)); // "CreatedAt"
-            list.add(new CellModel("11-" + i, user.updated_at)); // "UpdatedAt"
-            list.add(new CellModel("12-" + i, user.address));    // "Address"
-            list.add(new CellModel("13-" + i, user.zipcode));    // "Zip Code"
-            list.add(new CellModel("14-" + i, user.mobile));     // "Phone"
-            list.add(new CellModel("15-" + i, user.fax));        // "Fax"
+            list.add(new CellModel("1-" + i, word.mWord));          // "Id"
+            list.add(new CellModel("2-" + i, word.mTeam));        // "Name"
+            list.add(new CellModel("3-" + i, word.mData));    // "Nickname"
+            list.add(new CellModel("4-" + i, word.mScore));       // "Email"
+            list.add(new CellModel("5-" + i, word.birthdate));   // "BirthDay"
+            list.add(new CellModel("6-" + i, word.gender));      // "Gender"
+            list.add(new CellModel("7-" + i, word.age));         // "Age"
+            list.add(new CellModel("8-" + i, word.job));         // "Job"
+            list.add(new CellModel("9-" + i, word.salary));      // "Salary"
+            list.add(new CellModel("10-" + i, word.created_at)); // "CreatedAt"
+            list.add(new CellModel("11-" + i, word.updated_at)); // "UpdatedAt"
+            list.add(new CellModel("12-" + i, word.address));    // "Address"
+            list.add(new CellModel("13-" + i, word.zipcode));    // "Zip Code"
+            list.add(new CellModel("14-" + i, word.mobile));     // "Phone"
+            list.add(new CellModel("15-" + i, word.fax));        // "Fax"
 
             // Add
             lists.add(list);
@@ -190,10 +191,10 @@ public class MyTableViewModel {
     }
 
 
-    public void generateListForTableView(List<User> users) {
+    public void generateListForTableView(List<Word> words) {
         mColumnHeaderModelList = createColumnHeaderModelList();
-        mCellModelList = createCellModelList(users);
-        mRowHeaderModelList = createRowHeaderList(users.size());
+        mCellModelList = createCellModelList(words);
+        mRowHeaderModelList = createRowHeaderList(words.size());
     }
 
 }

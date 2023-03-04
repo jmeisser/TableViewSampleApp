@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.annotation.NonNull;
 
+import com.evrencoskun.tableviewsample2.ImportedDatabase.WordRepository;
 import com.evrencoskun.tableviewsample2.data.UserRepository;
 
 /**
@@ -11,16 +12,16 @@ import com.evrencoskun.tableviewsample2.data.UserRepository;
  * {@link com.evrencoskun.tableviewsample2.data.UserRepository}
  */
 public class MainViewModelFactory extends ViewModelProvider.NewInstanceFactory {
-    private final UserRepository userRepository;
+    private final WordRepository wordRepository;
 
-    public MainViewModelFactory(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public MainViewModelFactory(WordRepository wordRepository) {
+        this.wordRepository = wordRepository;
     }
 
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
         //noinspection unchecked
-        return (T) new MainViewModel(userRepository);
+        return (T) new MainViewModel(wordRepository);
     }
 }

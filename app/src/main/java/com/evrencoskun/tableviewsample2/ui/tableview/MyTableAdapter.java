@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import com.evrencoskun.tableview.adapter.AbstractTableAdapter;
 import com.evrencoskun.tableview.adapter.recyclerview.holder.AbstractSorterViewHolder;
 import com.evrencoskun.tableview.adapter.recyclerview.holder.AbstractViewHolder;
+import com.evrencoskun.tableviewsample2.ImportedDatabase.Word;
 import com.evrencoskun.tableviewsample2.R;
 import com.evrencoskun.tableviewsample2.data.database.entity.User;
 import com.evrencoskun.tableviewsample2.ui.tableview.holder.CellViewHolder;
@@ -150,9 +151,9 @@ public class MyTableAdapter extends AbstractTableAdapter<ColumnHeaderModel, RowH
      * This method is not a generic Adapter method. It helps to generate lists from single user
      * list for this adapter.
      */
-    public void setUserList(List<User> userList) {
+    public void setWordList(List<Word> wordList) {
         // Generate the lists that are used to TableViewAdapter
-        myTableViewModel.generateListForTableView(userList);
+        myTableViewModel.generateListForTableView(wordList);
 
         // Now we got what we need to show on TableView.
         setAllItems(myTableViewModel.getColumHeaderModeList(), myTableViewModel
