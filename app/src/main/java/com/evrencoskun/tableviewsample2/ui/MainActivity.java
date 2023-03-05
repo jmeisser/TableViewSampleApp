@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
+import com.evrencoskun.tableviewsample2.fragmentnav.SectionsPagerAdapter;
+import com.evrencoskun.databinding.ActivityMainBinding;
 import com.evrencoskun.tableviewsample2.R;
 
 public class MainActivity extends AppCompatActivity {

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ChopShopScout2023</string>
+    <string name="tab_text_1">QR Scan</string>
+    <string name="tab_text_2">Match Strategy</string>
+    <string name="tab_text_3">Match Prediction</string>
+    <string name="tab_text_4">Raw Data Visualization</string>
+    <string name="tab_text_5">Pit Data Visualization</string>
+    <string name="tab_text_6">Qualitative Data Visualization</string>
+    <string name="tab_text_7">Pick List</string>
+</resources>
