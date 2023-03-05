@@ -17,16 +17,16 @@ import com.evrencoskun.tableviewsample2.ui.viewmodel.MainViewModel;
 import com.evrencoskun.tableviewsample2.ui.viewmodel.MainViewModelFactory;
 import com.evrencoskun.tableviewsample2.utility.InjectorUtils;
 
-public class MainFragment extends Fragment {
+public class TableFragment extends Fragment {
 
-    private static final String LOG_TAG = MainFragment.class.getSimpleName();
+    private static final String LOG_TAG = TableFragment.class.getSimpleName();
 
     private TableView mTableView;
     private MyTableAdapter mTableAdapter;
     private ProgressBar mProgressBar;
     private MainViewModel vMainViewModel;
 
-    public MainFragment() {
+    public TableFragment() {
         // Required empty public constructor
     }
 

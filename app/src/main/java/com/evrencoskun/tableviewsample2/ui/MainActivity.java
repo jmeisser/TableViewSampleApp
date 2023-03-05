@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.activity_container, new
-                    MainFragment(), MainFragment.class.getSimpleName()).commit();
+                    TableFragment(), TableFragment.class.getSimpleName()).commit();
         }
 
         //hideNavigationBar();

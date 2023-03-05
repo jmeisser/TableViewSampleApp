@@ -3,7 +3,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.evrencoskun.tableviewsample2.ui.MainFragment">
+             tools:context="com.evrencoskun.tableviewsample2.ui.TableFragment">
 
     <com.evrencoskun.tableview.TableView
         android:id="@+id/my_TableView"
